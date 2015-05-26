@@ -1,6 +1,7 @@
 
 import random
 import string, os
+#from msvcrt import getch
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
@@ -100,10 +101,10 @@ def play_hand(hand, word_list):
     score = 0
     
     while 1:
-        word = raw_input("Input a word from your hand : ")
+        word = raw_input("Input a word : ")
         if word == '.':
             print 'Not Playing this hand.'
-            print 'Final Score remians :', score
+            print 'Final Score :', score
             break
     
         (valid, temp) = is_valid_word(word, hand, word_list)
@@ -112,8 +113,8 @@ def play_hand(hand, word_list):
         if valid == 'True':
             print 'Word Accepted'
             hand = temp
-            score += get_word_score(word, n)
-            print 'Your new score :', score
+            score += get_word_score(word, HAND_SIZE)
+            print 'Final Score :', score
             break
         else:
             print 'Sorry, the word you entered is either invalid or not from your hand.'
@@ -127,6 +128,7 @@ def play_game(word_list):
     while 1:
         value = raw_input('Input : ')
         if value == 'n':
+            print 'Initialising hand ... hand size is kept 7'
             prev_hand = deal_hand(HAND_SIZE)
             play_hand(prev_hand.copy(), word_list)
             play = 1
