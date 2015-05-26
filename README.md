@@ -2,11 +2,10 @@ scrabbleg
 ====================
 
 ##Run as
-'''bash
 		
 		python scrabble.py
 
-'''
+
 
 ##Playing Game
 
