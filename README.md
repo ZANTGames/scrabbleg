@@ -1,4 +1,4 @@
 scrabbleg
 ====================
 
-Cyclone on earth !
+To be updated...
