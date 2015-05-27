@@ -7,6 +7,7 @@ SCRABBLE_LETTER_VALUES = {
     'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
+
 def load_words():
 
     print "Loading word list from file..."
@@ -39,6 +40,7 @@ def get_word_score(word, n):
         score += 50
 
     return score
+
 
 def is_valid_word(word, hand, word_list):
 
